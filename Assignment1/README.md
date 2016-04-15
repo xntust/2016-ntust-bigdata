@@ -9,6 +9,7 @@
 >作業簡介: 讓同學瞭解資料分析的第一個階段，如何永久化保存資料(Persistence)，保存資料的格式包含：CSV與JSON格式。
 >
 >詳細需求與繳交方式: 
+>
 >1. 請參考上課所給予的範例程式，對於Twitter或Github的資料進行蒐集，所蒐集到的資料的純文字檔需大於1G(JSON或CSV任一格式達到1G即可)。
 >
 >2. 請以Markdown(http://markdown.tw) 說明收集到的Data Format(JSON的欄位架構、CSV的Fields)、Data Sources (從哪個API來的？內容主題為何？下哪個查詢字串？)，並將說明文件存成readme.md。
