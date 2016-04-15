@@ -67,6 +67,7 @@ $ elasticdump \
 -- output=garbage-data.json \
 --type=data
 ```
+[garbage-data.json]()(檔案過大，多次傳送失敗)
 
 ### 後記
 由於追求抓資料的速度，設定關鍵字為“a”，過於粗糙，
