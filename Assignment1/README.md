@@ -11,7 +11,7 @@
 >詳細需求與繳交方式: 
 >1. 請參考上課所給予的範例程式，對於Twitter或Github的資料進行蒐集，所蒐集到的資料的純文字檔需大於1G(JSON或CSV任一格式達到1G即可)。
 >
->2. 請以Markdown(http://markdown.tw/)說明收集到的Data Format(JSON的欄位架構、CSV的Fields)、Data Sources (從哪個API來的？內容主題為何？下哪個查詢字串？)，並將說明文件存成readme.md。
+>2. 請以Markdown(http://markdown.tw)說明收集到的Data Format(JSON的欄位架構、CSV的Fields)、Data Sources (從哪個API來的？內容主題為何？下哪個查詢字串？)，並將說明文件存成readme.md。
 >
 >3. 收集完後的資料一律壓縮成zip檔，連同收集程式上傳到自己的github上，另外也將readme.md上傳至github(看到的樣子如：https://github.com/apache/spark) 建議資料夾配置為/crawler與/dataset，dataset中有兩個資料夾，分別為/csv與/json。
 >
@@ -28,6 +28,7 @@
 + Git
 + npm
 + [Elasticdump](https://github.com/taskrabbit/elasticsearch-dump/)
+
 ### 2. 主要配置檔案
 #### /logstash/bin/twitter.config
 ```shell=
@@ -63,3 +64,25 @@ $ elasticdump \
 --type=data
 ```
 
+### 後記
+由於追求抓資料的速度，設定關鍵字未“a”，過於粗糙，
+以至於"garbage-data.json"該Dataset可能沒有分析價值，
+下次有目的性地設定關鍵字，再重新抓過。
+
+
+--------------
+
+#### 參考資料
++ Wiki - GitHub 設定指引 http://wiki.csie.ncku.edu.tw/github
++ elasticsearch + fluentd + kibana4(EFK) 安裝詳細流程 in ubuntu14.04 « chi - 下班隨筆
+http://chi15036-blog.logdown.com/posts/297025-elasticsearch-fluentd-kibana4-installation-details-processes-in-ubuntu1404
++ 匯出Elasticsearch的資料 « chi - 下班隨筆
+http://chi15036-blog.logdown.com/posts/301342-dump-elk-log-to-the-r-statistical-diagram
++ PyES - Python Elastic Search — PyES Documentation 0.99.7dev (unstable) documentation
+https://pyes.readthedocs.org/en/latest/index.html
++ mark19891107/elasticsearch-tutorial: Examples of pyes ( elasticsearch python library ) and documents
+https://github.com/mark19891107/elasticsearch-tutorial
++ GitHub - taskrabbit/elasticsearch-dump: Import and export tools for elasticsearch
+https://github.com/taskrabbit/elasticsearch-dump
++ JSON Editor Online - view, edit and format JSON online
+http://www.jsoneditoronline.org/
