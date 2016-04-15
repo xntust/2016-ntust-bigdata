@@ -11,7 +11,7 @@
 >詳細需求與繳交方式: 
 >1. 請參考上課所給予的範例程式，對於Twitter或Github的資料進行蒐集，所蒐集到的資料的純文字檔需大於1G(JSON或CSV任一格式達到1G即可)。
 >
->2. 請以Markdown(http://markdown.tw)說明收集到的Data Format(JSON的欄位架構、CSV的Fields)、Data Sources (從哪個API來的？內容主題為何？下哪個查詢字串？)，並將說明文件存成readme.md。
+>2. 請以Markdown(http://markdown.tw) 說明收集到的Data Format(JSON的欄位架構、CSV的Fields)、Data Sources (從哪個API來的？內容主題為何？下哪個查詢字串？)，並將說明文件存成readme.md。
 >
 >3. 收集完後的資料一律壓縮成zip檔，連同收集程式上傳到自己的github上，另外也將readme.md上傳至github(看到的樣子如：https://github.com/apache/spark) 建議資料夾配置為/crawler與/dataset，dataset中有兩個資料夾，分別為/csv與/json。
 >
@@ -19,14 +19,16 @@
 
 ### 1. 建立作業環境(Ubuntu LINUX 64-bit)
 #### ELK
-+ Elasticsearch (plugin/head)
++ [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
++ [Elasticsearch](https://www.elastic.co/downloads/elasticsearch) (plugin/head)
 	+ $ ./bin/plugin install mobz/elasticsearch-head 
-+ Logstash
-+ Kibana* (視覺化工具)
++ [Logstash](https://www.elastic.co/downloads/logstash)
++ [Kibana](https://www.elastic.co/downloads/kibana)* (視覺化工具)
 *參考課程教學投影片*
-#### Tools
+#### Other Tools
++ [Twitter Application Management](https://apps.twitter.com/) 取得相關Key
 + Git
-+ npm
++ [npm](https://github.com/npm/npm)
 + [Elasticdump](https://github.com/taskrabbit/elasticsearch-dump/)
 
 ### 2. 主要配置檔案
@@ -66,7 +68,7 @@ $ elasticdump \
 
 ### 後記
 由於追求抓資料的速度，設定關鍵字未“a”，過於粗糙，
-以至於"garbage-data.json"該Dataset可能沒有分析價值，
+以至於"garbage-data.json"該Dataset可能沒有分析價值。
 下次有目的性地設定關鍵字，再重新抓過。
 
 
